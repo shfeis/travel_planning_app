@@ -1,0 +1,22 @@
+server:
+  port: 8080   # 后端服务的端口
+  servlet:
+    encoding:
+      charset: UTF-8 #设置字符编码
+      enabled: true #让SpringBoot自动对HTTP请求和响应进行字符编码处理。
+      force: true #强制将request和response的字符编码都设置为charset的值
+
+spring:
+  http:
+    client:
+      read-timeout: 60000 #http请求超时时间为60秒
+# 设置Mysql数据库的数据源(指定要操作的数据库、用户名、密码、jdbc驱动类)
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/travelDB?useSSL=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: hsp
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# 对MonsterMapper.xml进行设置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #启用日志输出，查看要执行的sql语句和结果

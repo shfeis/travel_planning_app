@@ -1,0 +1,25 @@
+@import './base.css';
+
+html,
+body,
+#app {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f7f8fa;
+}
+
+#app {
+  max-width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #f7f8fa;
+  font-weight: normal;
+}
+
+button {
+  cursor: pointer;
+}
